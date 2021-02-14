@@ -1,6 +1,7 @@
 <template>
   <label>{{ label }}</label>
   <input
+    v-bind="$attrs"
     :placeholder="label"
     class="field"
     :value="modelValue"
@@ -13,16 +14,12 @@ export default {
   props: {
     label: {
       type: String,
-      default: "",
-      modelValue: {
-        type: [String, Number],
-        default: ""
-      }
+      default: ""
+    },
+    modelValue: {
+      type: [String, Number],
+      default: ""
     }
   }
-};
+}
 </script>
-
-<style scoped>
-
-</style>

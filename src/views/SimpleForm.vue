@@ -54,7 +54,7 @@
 import BaseInput from "../components/BaseInput.vue";
 export default {
   components: { BaseInput },
-  data () {
+  data() {
     return {
       categories: [
         "sustainability",
