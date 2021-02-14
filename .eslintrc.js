@@ -21,5 +21,5 @@ module.exports = {
     "@vue/standard",
     "eslint:recommended",
     "@vue/prettier"
-  ]
+  ],
 };
