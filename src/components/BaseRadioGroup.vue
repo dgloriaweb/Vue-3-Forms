@@ -1,22 +1,24 @@
 <template>
-<component v-for="option in options"
-:key="option.value"
-:is="vertical ? 'div': 'span'"
-class="{
+  <component
+    v-for="option in options"
+    :key="option.value"
+    :is="vertical ? 'div' : 'span'"
+    class="{
     horizontal: !vertical
-    }">
-  <BaseRadio
-    :label="option.label"
-    :value="option.value"
-    :name="name"
-    :modelValue="modelValue"
-    @update:modelValue="$emit('update:modelValue', $event)"
-  />
-</component>
+    }"
+  >
+    <BaseRadio
+      :label="option.label"
+      :value="option.value"
+      :name="name"
+      :modelValue="modelValue"
+      @update:modelValue="$emit('update:modelValue', $event)"
+    />
+  </component>
 </template>
 
 <script>
-import BaseRadio from './BaseRadio.vue'
+import BaseRadio from "./BaseRadio.vue";
 
 export default {
   components: { BaseRadio },
@@ -38,11 +40,11 @@ export default {
       default: false
     }
   }
-}
+};
 </script>
 
 <style scoped>
-.horizontal{
-    margin-right: 20px;
+.horizontal {
+  margin-right: 20px;
 }
 </style>
